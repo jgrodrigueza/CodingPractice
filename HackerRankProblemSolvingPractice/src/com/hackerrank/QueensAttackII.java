@@ -1,3 +1,5 @@
+//https://www.hackerrank.com/challenges/queens-attack-2/problem
+	
 package com.hackerrank;
 
 import java.io.*;
@@ -26,7 +28,7 @@ import java.util.*;
     	
 */
 
-public class QueensAttack {
+public class QueensAttackII {
 
     // Complete the queensAttack function below.
     static int queensAttack(int n, int k, int r_q, int c_q, int[][] obstacles) {
