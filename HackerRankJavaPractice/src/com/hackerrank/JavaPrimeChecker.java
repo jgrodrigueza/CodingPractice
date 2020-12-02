@@ -23,7 +23,7 @@ class Prime {
 	}
 }
 
-public class PrimeChecker {
+public class JavaPrimeChecker {
 
 	public static void main(String[] args) {
 		try {

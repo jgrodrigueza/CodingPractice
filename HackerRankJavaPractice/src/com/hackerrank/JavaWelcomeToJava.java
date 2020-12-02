@@ -1,7 +1,7 @@
 //https://www.hackerrank.com/challenges/welcome-to-java/problem
 package com.hackerrank;
 
-public class WelcomeToJava {
+public class JavaWelcomeToJava {
 
     public static void main(String[] args) {
         System.out.println("Hello, World.");

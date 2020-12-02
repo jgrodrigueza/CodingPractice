@@ -14,7 +14,7 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
+class ResultTaumAndBday {
 
     /*
      * Complete the 'taumBday' function below.
@@ -63,7 +63,7 @@ public class TaumAndBday {
 
                 int z = Integer.parseInt(secondMultipleInput[2]);
 
-                long result = Result.taumBday(b, w, bc, wc, z);
+                long result = ResultTaumAndBday.taumBday(b, w, bc, wc, z);
 
                 bufferedWriter.write(String.valueOf(result));
                 bufferedWriter.newLine();

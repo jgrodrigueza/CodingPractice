@@ -2,8 +2,10 @@ package com.hackerrank;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -20,33 +22,31 @@ import java.util.Set;
     	
 */
 
-public class Solution {
-	
-	//https://www.hackerrank.com/challenges/lilys-homework/problem
-    // Complete the lilysHomework function below.
-    static int lilysHomework(int[] arr) {
-    	
-    	int swaps = 0;
-    	return swaps;
+public class A1Solution {
 
+    public static boolean isSmartNumber(int num) {
+        int val = (int) Math.sqrt(num);    
+        if((double)num / val == val)
+            return true;
+        return false;
     }
-
-
+    
     public static void main(String[] args) throws IOException {
-		String test = "4\r\n2 5 3 1";
+    	
+		String test = "4\r\n1\r\n2\r\n7\r\n169";
 		ByteArrayInputStream systemIn = new ByteArrayInputStream(test.getBytes());
     	System.setIn(systemIn);
     	Scanner scanner = new Scanner(System.in);
-    	int n = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-        int[] arr = new int[n];
-        String[] arrItems = scanner.nextLine().split(" ");
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-        for (int i = 0; i < n; i++) {
-            int arrItem = Integer.parseInt(arrItems[i]);
-            arr[i] = arrItem;
+        int test_cases = scanner.nextInt();
+        int num;
+        for(int i = 0; i < test_cases; i++){
+            num = scanner.nextInt();
+            boolean ans = isSmartNumber(num);
+            if(ans){
+                System.out.println("YES");
+            }
+            else System.out.println("NO");
         }
-        int result = lilysHomework(arr);
-        scanner.close();
     }
+    
 }

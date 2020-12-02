@@ -14,7 +14,7 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
+class ResultPickingNumbers {
 
     /*
      * Complete the 'pickingNumbers' function below.
@@ -49,7 +49,7 @@ public class PickingNumbers {
             .map(Integer::parseInt)
             .collect(toList());
 
-        int result = Result.pickingNumbers(a);
+        int result = ResultPickingNumbers.pickingNumbers(a);
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();

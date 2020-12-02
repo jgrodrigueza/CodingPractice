@@ -14,7 +14,7 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
+class ResultClimbingTheLeaderboard {
 
     /*
      * Complete the 'climbingLeaderboard' function below.
@@ -75,7 +75,7 @@ public class ClimbingTheLeaderboard {
             .map(Integer::parseInt)
             .collect(toList());
 
-        List<Integer> result = Result.climbingLeaderboard(ranked, player);
+        List<Integer> result = ResultClimbingTheLeaderboard.climbingLeaderboard(ranked, player);
 
         bufferedWriter.write(
             result.stream()

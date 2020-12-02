@@ -14,7 +14,7 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
-class Result {
+class ResultCountingValleys {
 
     /*
      * Complete the 'countingValleys' function below.
@@ -53,7 +53,7 @@ public class CountingValleys {
 
         String path = bufferedReader.readLine();
 
-        int result = Result.countingValleys(steps, path);
+        int result = ResultCountingValleys.countingValleys(steps, path);
 
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();

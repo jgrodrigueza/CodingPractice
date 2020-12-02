@@ -5,7 +5,7 @@ package com.hackerrank;
 import java.util.Scanner;
 import java.util.regex.*;
 
-public class PatternSyntaxChecker
+public class JavaPatternSyntaxChecker
 {
 	public static void main(String[] args){
 		Scanner in = new Scanner(System.in);
