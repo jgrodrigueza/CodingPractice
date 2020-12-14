@@ -3,7 +3,7 @@ https://www.hackerrank.com/challenges/python-arithmetic-operators/problem
 
 Created on 3 dic. 2020
 
-@author: RodriguezCastro
+@author: jgrodrigueza
 '''
 
 #!/bin/python3
