@@ -10,7 +10,7 @@ import java.security.Permission;
 public class JavaCanYouAccess {
 
 	public static void main(String[] args) throws Exception {
-		DoNotTerminate.forbidExit();	
+		DoNotTerminateJavaIntToString.forbidExit();	
 
 		try{
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -23,7 +23,7 @@ public class JavaCanYouAccess {
 		
 		}//end of try
 		
-		catch (DoNotTerminate.ExitTrappedException e) {
+		catch (DoNotTerminateJavaIntToString.ExitTrappedException e) {
 			System.out.println("Unsuccessful Termination!!");
 		}
 	}//end of main

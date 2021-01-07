@@ -8,10 +8,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-class StudentSort implements Comparator<Student> {
+class StudentSort implements Comparator<StudentJavaPriorityQueue> {
 
 	@Override
-	public int compare(Student student1, Student student2) {
+	public int compare(StudentJavaPriorityQueue student1, StudentJavaPriorityQueue student2) {
 		// CGPA (Desc), First Name (Asc), ID (Asc)
 		int cgpaComp = (int) Double.compare(student1.getCgpa(), student2.getCgpa());
 		int nameComp = student1.getName().compareTo(student2.getName());
@@ -26,7 +26,7 @@ class StudentSort implements Comparator<Student> {
 	}
 }
 
-class Student {
+class StudentJavaPriorityQueue {
 
 	private int id;
 	private String name;
@@ -56,7 +56,7 @@ class Student {
 		this.cgpa = cgpa;
 	}
 
-	public Student(int id, String name, double cgpa) {
+	public StudentJavaPriorityQueue(int id, String name, double cgpa) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -67,15 +67,15 @@ class Student {
 
 class Priorities {
 
-	public List<Student> getStudents(List<String> events) {
+	public List<StudentJavaPriorityQueue> getStudents(List<String> events) {
 		int id = 1;
-		List<Student> temp = new ArrayList<Student>();
+		List<StudentJavaPriorityQueue> temp = new ArrayList<StudentJavaPriorityQueue>();
 		for (String event : events) {
 			if (!event.equalsIgnoreCase("SERVED")) {
 				String[] st = event.split(" ");
 				String name = st[0];
 				String cgpa = st[1];
-				temp.add(new Student(id, st[1], Double.parseDouble(st[2])));
+				temp.add(new StudentJavaPriorityQueue(id, st[1], Double.parseDouble(st[2])));
 				id++; // Increment the ID.
 			} else {
 				Collections.sort(temp, new StudentSort());
@@ -101,12 +101,12 @@ public class JavaPriorityQueue {
 			events.add(event);
 		}
 
-		List<Student> students = priorities.getStudents(events);
+		List<StudentJavaPriorityQueue> students = priorities.getStudents(events);
 
 		if (students.isEmpty()) {
 			System.out.println("EMPTY");
 		} else {
-			for (Student st : students) {
+			for (StudentJavaPriorityQueue st : students) {
 				System.out.println(st.getName());
 			}
 		}

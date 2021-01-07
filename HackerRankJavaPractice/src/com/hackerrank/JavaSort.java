@@ -4,12 +4,12 @@ package com.hackerrank;
 
 import java.util.*;
 
-class Student {
+class StudentJavaSort {
 	private int id;
 	private String fname;
 	private double cgpa;
 
-	public Student(int id, String fname, double cgpa) {
+	public StudentJavaSort(int id, String fname, double cgpa) {
 		super();
 		this.id = id;
 		this.fname = fname;
@@ -29,10 +29,10 @@ class Student {
 	}
 }
 
-class StudentSort implements Comparator<Student> {
+class StudentSortJavaSort implements Comparator<StudentJavaSort> {
 
 	@Override
-	public int compare(Student student1, Student student2) {
+	public int compare(StudentJavaSort student1, StudentJavaSort student2) {
 		// CGPA (Desc), First Name (Asc), ID (Asc)
 		int cgpaComp = (int) Double.compare(student1.getCgpa(), student2.getCgpa());
 		int nameComp = student1.getFname().compareTo(student2.getFname());
@@ -53,19 +53,19 @@ public class JavaSort {
 		Scanner in = new Scanner(System.in);
 		int testCases = Integer.parseInt(in.nextLine());
 
-		List<Student> studentList = new ArrayList<Student>();
+		List<StudentJavaSort> studentList = new ArrayList<StudentJavaSort>();
 		while (testCases > 0) {
 			int id = in.nextInt();
 			String fname = in.next();
 			double cgpa = in.nextDouble();
 
-			Student st = new Student(id, fname, cgpa);
+			StudentJavaSort st = new StudentJavaSort(id, fname, cgpa);
 			studentList.add(st);
 
 			testCases--;
 		}
-		Collections.sort(studentList, new StudentSort());
-		for (Student st : studentList) {
+		Collections.sort(studentList, new StudentSortJavaSort());
+		for (StudentJavaSort st : studentList) {
 			System.out.println(st.getFname());
 		}
 	}

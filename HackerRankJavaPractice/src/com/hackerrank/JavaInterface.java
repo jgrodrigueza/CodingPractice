@@ -8,7 +8,7 @@ interface AdvancedArithmetic {
 	int divisor_sum(int n);
 }
 
-class MyCalculator implements AdvancedArithmetic {
+class MyCalculatorJavaInterface implements AdvancedArithmetic {
 
 	public int divisor_sum(int n) {
 		int result = 0;
@@ -24,7 +24,7 @@ class MyCalculator implements AdvancedArithmetic {
 
 class JavaInterface {
 	public static void main(String[] args) {
-		MyCalculator my_calculator = new MyCalculator();
+		MyCalculatorJavaInterface my_calculator = new MyCalculatorJavaInterface();
 		System.out.print("I implemented: ");
 		ImplementedInterfaceNames(my_calculator);
 		Scanner sc = new Scanner(System.in);

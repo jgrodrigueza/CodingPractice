@@ -23,14 +23,14 @@ public class JavaIntToString {
 			} else {
 				System.out.println("Wrong answer.");
 			}
-		} catch (DoNotTerminate.ExitTrappedException e) {
+		} catch (DoNotTerminateJavaIntToString.ExitTrappedException e) {
 			System.out.println("Unsuccessful Termination!!");
 		}
 	}
 }
 
 //The following class will prevent you from terminating the code using exit(0)!
-class DoNotTerminate {
+class DoNotTerminateJavaIntToString {
 
 	public static class ExitTrappedException extends SecurityException {
 
